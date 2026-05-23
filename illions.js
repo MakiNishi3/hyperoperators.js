@@ -1,22 +1,6 @@
 /*
-	illions.js: v2.01
-		By Aarex Tiaokhiao, 2021
-		GEN. VI-Mu: Lightning-Thornus [Tria-Respeccus III]
-		Epsilon Stage
-	A program that generates -illion names and abbrevations up to currently killillion.
-
-	[DECIMAL LIBRARY IS REQUIRED] https://github.com/aarextiaokhiao/magna_numerus.js/blob/master/logarithmica_numerus_lite.js
-	
-	See about illions.js at: https://github.com/aarextiaokhiao/illions.js
-	Feel free to use it at: https://github.com/aarextiaokhiao/illions.js/blob/main/illions.js
-
-	Sources:
-		Tier 1 - 4: https://sites.google.com/site/largenumbers/home/2-4/8
-		            https://sites.google.com/site/pointlesslargenumberstuff/home/1/bowersillions
-		Tier 4 - 6: https://integralview.wordpress.com/2020/10/01/extended-tier-4-to-6-illions/
-		Fonster's 2M Prefixes [Tier 5]: https://sites.google.com/site/pointlesslargenumberstuff/home/l/pgln2/2msiprefixes
-		Connections: https://docs.google.com/document/d/1dhCjmN9_qOyydKY6a_rzbCfNg8yIGslEPVfA9iz60Ig/edit?usp=sharing
-		Tamara's Illions: https://tamaramacadam.me/maths/largenumbers/illions.html
+	îîșălțțlîă.,ă, doesnt work some best hyperoperators
+	Tiers: Addition up to Multidion up beyond Kilation
 */
 
 //OPTIONS
@@ -49,7 +33,7 @@ let ILLIONS = {
 	0: {
 		name: {
 			data: {
-				o: ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
+				o: ["", "addi", "multiplica", "three", "four", "five", "six", "seven", "eight", "nine"],
 				teen: ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
 				t: ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 			},
@@ -83,14 +67,14 @@ let ILLIONS = {
 	1: {
 		name: {
 			data: {
-				o_s: ['thousand', 'm', 'b', 'tr', "quadr", "quint", "sext", "sept", "oct", "non"],
-				o_s_t2: ['', 'un', 'du'],
-				o_eng_t2: ['', 'unt', 'duet'],
-				o: ['', 'un', 'duo', 'tre', 'quattour', 'quin', 'sex', 'septen', 'octo', 'novem'],
+				o_s: ['thousandi', 'milli', 'billi', 'trilli', "quadrilli", "quintilli", "sextilli", "septilli", "octilli", "nonilli"],
+				o_s_t2: ['', 'uni', 'due'],
+				o_eng_t2: ['', 'unna', 'disa'],
+				o: ['', 'um', 'din', 'tina', 'tetra', 'penta', 'hexa', 'hepta', 'octa', 'enna'],
 
-				t: ['', 'dec', 'vigint', 'trigint', 'quadragint', 'quinquagint', 'sexagint', 'septuagint', 'octogint', 'nonagint'],
-				h: ['', 'cent', 'ducent', 'tricent', 'quadragent', 'quinquagent', 'sexagent', 'septuagent', 'octogent', 'nonagent'],
-				h_eng: ['', 'cent', 'ducent', 'trecent', 'quadringent', 'quingent', 'sescent', 'septingent', 'octingent', 'nongent']
+				t: ['', 'deca', 'icosa', 'triaconta', 'tetraconta', 'pentaconta', 'hexaconta', 'heptaconta', 'octaconta', 'nonaconta'],
+				h: ['', 'hecta', 'duhecta', 'trihecta', 'quadrahecta', 'quintihecta', 'sexahecta', 'septuahecta', 'octinhecta', 'nonhecta'],
+				h_eng: ['', 'centa', 'ducenta', 'trucenta', 'quadringenta', 'quingenta', 'sexacenta', 'septingenta', 'octingenta', 'nongenta']
 			},
 			format(x, ty = "") {
 				//SETUP
@@ -155,10 +139,10 @@ let ILLIONS = {
 		name: {
 			data: {
 				eng: {
-					o_s: ["", "mill", "micr", "nan", "pic", "fem", "att", "zept", "yoct", "xenn"],
-					o: ["", "me", "due", "trio", "tetre", "pente", "hexe", "hepte", "octe", "enne"],
-					te: ["vec", "mec", "duec", "trec", "tetrec", "pentec", "hexec", "heptec", "octec", "ennec"],
-					d: ["", "", "do", "tria", "tetra", "penta", "hexa", "hepta", "octa", "ennea"],	
+					o_s: ["", "milla", "micra", "nana", "pica", "fema", "atta", "zepta", "yocta", "xenna"],
+					o: ["", "mea", "duea", "trioa", "tetrea", "pentea", "hexea", "heptea", "octea", "ennea"],
+					te: ["veca", "meca", "dueca", "treca", "tetreca", "penteca", "hexeca", "hepteca", "octeca", "enneca"],
+					d: ["", "", "dota", "tria", "trua", "punta", "huxa", "hupta", "ucta", "novea"],	
 				},
 				tam: [
 					"", "mo", "do", "tro", "tetro", "pento", "hexo", "hepto", "octo", "enno",
@@ -301,7 +285,7 @@ let ILLIONS_FUNCTIONS = {
 		if (x == 1 && ty == "mul") return ""
 		if (x == 0 && (t > 1 || ty != "")) return ""
 		if (ILLIONS[t] === undefined) {
-			console.error("[illions.js] Tier " + t + " abbreviations aren't supported.")
+			console.error("[illions.js] Tier " + t + " abbreviations are not supported.")
 			return "?"
 		}
 		if (x >= 1e3) return this.abb(x, t, k)
@@ -321,7 +305,7 @@ let ILLIONS_FUNCTIONS = {
 			e++
 		}
 		if (ee >= ILLIONS_OPTIONS.precPoint) {
-			if (t == 1 && k == "name") return this.abb(Math.floor(e / 3), t + 1, k) + "illion"
+			if (t == 1 && k == "name") return this.abb(Math.floor(e / 3), t + 1, k) + "tion"
 			return this.abb(Math.floor(e / 3), t + 1, k)
 		}
 
@@ -349,7 +333,7 @@ let ILLIONS_FUNCTIONS = {
 		if (x.lt(1)) return x.toFixed(2)
 
 		var e = x.e
-		var ill = (e >= 6 && k == "name" ? "illion" : "")
+		var ill = (e >= 6 && k == "name" ? "tion" : "")
 		if (e == 1/0) return this.abb(x.log10().div(ILLIONS_OPTIONS.long ? 6 : 3), 1, k) + ill
 
 		var e3 = Math.floor(e / 3)
@@ -366,7 +350,7 @@ let ILLIONS_FUNCTIONS = {
 
 		if (ILLIONS_OPTIONS.long && e3_rel > 0) return m +
 			(e3_rel > 0 ? " " + this.abb(e3_rel, 1, k) : "") +
-			(k == "name" ? "illi" + (e3 % 2 == 1 ? "ard" : "on") : e3 % 2 == 1 ? "rd" : "")
+			(k == "name" ? "" + (e3 % 2 == 1 ? "tiard" : "tion") : e3 % 2 == 1 ? "rd" : "")
 		return m +
 			(e3 > 0 ? " " + this.abb(e3_rel, 1, k) : "") +
 			ill
